@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello Techzara{% endblock %}
+{% block body %}
+
+    <div>
+        <div>
+            Nom : {{profile.nom}}
+        </div>
+        <div>
+            Prénom : {{profile.prenom}}
+        </div>
+        <div>
+            Date de naissance : {{profile.dateDeNaissance}}
+        </div>
+        <div>
+            {% for parents in profile.parent %}
+                <div>Nom : {{parents.nom}} {{parents. prenom}}</div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <h2>Array flatten</h2>
+    <div>
+        {% for f in flat %}
+            {{f}}
+        {% endfor %}
+    </div>
+{% endblock %}

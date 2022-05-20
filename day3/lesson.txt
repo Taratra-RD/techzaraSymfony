@@ -1,0 +1,86 @@
+différentes types de pattern:
+    _créational
+    _behavorial
+    _structural
+
+    *MVC -> design pattern architectural
+        _M: modèle
+            *Business logique base de donnée (une plan à suivre pour notre projet)
+        _V: vue
+            *tous ce qui est interface (CLI, GLI)
+        _C: controlleur
+            *règle les traffics des vues
+    
+MDP:7T22JQ80G39
+
+
+structure du projet
+
+bin
+config
+src 
+template
+test
+migrations
+public
+    index.php
+vendor
+var
+    cache
+    log
+
+.env
+    configuration environnement variable
+    creer un fichier .env.local
+symfony utilise un contrat de fichier yml
+
+configuration environnement variable
+creer un fichier .env.local et copier le contenu .env
+database url:postgres decommenter et changer en mysql
+
+terminale dans le même projet php bin/console
+
+doctrine -> framework mysql
+doctrine:database:create
+dossier src
+    controlleur
+        .gitignore
+        comme on a créer une classe php HomeControler.php <- namespace app\controler
+        namespace app\controler
+        use symfony\component\routing\annotation\route;
+        use httpFoundation\Response
+        class HomeController
+        {
+            /**
+            @Route("/",name="home")/
+            public function home()
+            {
+                return NewResponse{
+                    "Hello World"
+                }
+            }
+        }
+
+
+
+        [
+            nom
+            prenom
+            date de naissance
+            parent
+            [
+                pere=>[nom, prenom],
+                mere=>[nom, prenom]
+            ]
+            etude
+            [
+                [etablissement=>"", diplome=>""],
+            ]
+            experience
+            [
+                [societe=>"", poste=>""]
+            ]
+        ]
+    
+    tsy atao anaty methode fa ao anaty constant
+    
